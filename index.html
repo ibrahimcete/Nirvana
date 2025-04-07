@@ -14,6 +14,43 @@
 
   <!-- Site stili -->
   <link rel="stylesheet" href="css/style.css">
+
+<style>
+  @keyframes spin-logo {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .logo-animated {
+    animation: spin-logo 4s linear infinite;
+    display: inline-block;
+    width: 80px;
+  }
+</style>
+
+
+<style>
+  @keyframes magicFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(1.2);
+      filter: blur(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .logo-magic {
+    animation: magicFadeIn 2s ease-out forwards;
+    display: inline-block;
+    opacity: 0; /* Initial state for animation */
+    width: 100px;
+    margin-top: 1rem;
+  }
+</style>
+
 </head>
 <body>
 
@@ -39,7 +76,7 @@
   <!-- HERO -->
   <section id="hero">
     <div class="content container" data-aos="zoom-in">
-      <img src="assets/img/logo.png" class="img-fluid mb-4" style="max-width:300px" alt="Logo">
+      <img src="assets/img/logo.png" class="logo-magic" class="logo-magic" class="img-fluid mb-4" style="max-width:300px" alt="Logo">
       <h1 class="display-4 fw-bold">Teknoloji & Yaratıcılığın Buluşma Noktası</h1>
       <p class="lead mb-4">3D baskıdan akıllı donanıma, mobil yazılımlardan inovatif projelere kadar geleceği inşa ediyoruz.</p>
       <a href="#products" class="btn btn-gradient btn-lg">Keşfet</a>
@@ -147,26 +184,18 @@
 </body>
 </html>
 
-<section class="container" style="margin-top: 3rem;">
-  <div class="grid">
-    <article>
-      <hgroup>
-        <h2>BlinkLight Fanmade Ürünü</h2>
-        <h3>RGB LED destekli akıllı lightstick</h3>
-      </hgroup>
-      <p>
-        Gerçek zamanlı senkronizasyon, uygulama ile kontrol, karaoke özelliği ve daha fazlası!
-        Mobil uygulama üzerinden tam kontrol sağlayın.
-      </p>
-      <figure>
-        <img src="assets/img/product-blinklight.jpg" alt="BlinkLight Tanıtım Görseli">
-        <figcaption>Gerçek ürün görseli. <a href="assets/img/product-blinklight.jpg" target="_blank">Büyüt</a></figcaption>
-      </figure>
-      <div class="grid">
-        <a href="BlinkLightApp.apk" download role="button">Uygulamayı İndir (.APK)</a>
-        <a href="#" role="button" class="secondary">Daha Fazla Bilgi</a>
-      </div>
-      <p><small>Android yüklemesi için cihazınızda 'Bilinmeyen Kaynaklara izin ver' ayarını etkinleştirin.</small></p>
-    </article>
-  </div>
-</section>
+<div class='grid'>
+
+<article>
+  <img src="assets/img/product-blinklight.jpg" alt="BlinkLight Mobil Uygulaması">
+  <footer>
+    <h3>BlinkLight Mobil Uygulaması</h3>
+    <p>
+      RGB LED destekli lightstick'inizi kontrol edin, karaoke yapın, görevleri tamamlayın ve ödüller kazanın.
+    </p>
+    <a href="BlinkLightApp.apk" role="button" download>Uygulamayı İndir (.APK)</a>
+    <a href="#" role="button" class="secondary">Detaylı Bilgi</a>
+  </footer>
+</article>
+
+</div>
